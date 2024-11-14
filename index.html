@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fx vibe</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="images/logo.png" rel="icon" width="32" height="32">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .y {
+            display: flex;
+            flex-wrap: wrap;
+        
+        }
+/* From Uiverse.io by MikeAndrewDesigner */ 
+
+.e-card {
+    margin: 100px auto;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+    position: relative;
+    width: 240px;
+    height: 330px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+  }
+  
+  .icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+  }
+  
+  .infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  .name {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    text-transform: lowercase;
+  }
+  
+  .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+  }
+  
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+  
+  .playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+  
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+  
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+        
+
+        .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active {
+            color:  #FFD700                  !important;
+        }
+        .cards__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Adjusts alignment */
+            gap: 1rem; /* Adds space between flex items */
+          }
+          
+          /* System (Desktop) View */
+          @media (min-width: 768px) {
+            .cards__inner {
+              justify-content: flex-start; /* Adjusts alignment for larger screens */
+              gap: 2rem; /* Increases space for larger screens */
+            }
+          }
+          
+          /* Mobile View */
+          @media (max-width: 767px) {
+            .cards__inner {
+              flex-direction: column; /* Stack items vertically on mobile */
+              align-items: center;
+            }
+          }
+          
+
+
+
+        /* From Uiverse.io by AnthonyPreite */ 
+.main__heading {
+    font-weight: 600;
+    font-size: 2.25em;
+    margin-bottom: 0.75em;
+    text-align: center;
+    color: #eceff1;
+  }
+  
+  .cards {
+    position: relative;
+  }
+  
+  .card {
+    --flow-space: 0.5em;
+    --hsl: var(--hue), var(--saturation), var(--lightness);
+    flex: 1 1 14rem;
+    padding: 1.5em 2em;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: start;
+    gap: 1.25em;
+    color: #eceff1;
+    background-color: #2b2b2b;
+    border: 1px solid #eceff133;
+    border-radius: 15px;
+  }
+  
+  .card:nth-child(1) {
+    --hue: 165;
+    --saturation: 82.26%;
+    --lightness: 51.37%;
+  }
+  
+  .card__bullets {
+    line-height: 1.4;
+  }
+  
+  .card__heading {
+    font-size: 1.05em;
+    font-weight: 600;
+  }
+  
+  .card__price {
+    font-size: 1.75em;
+    font-weight: 700;
+  }
+  
+  .flow > * + * {
+    margin-top: var(--flow-space, 1.25em);
+  }
+  
+  .cta {
+    display: block;
+    align-self: end;
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    outline: 1px solid white;
+    padding: 0.7em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .card:hover {
+    --lightness: 80%;
+    background: #ffffff80;
+    color: #000;
+    outline: 1px solid rgb(255, 255, 255);
+    box-shadow: inset 0 0 80px whitesmoke, inset 20px 0 80px rgba(255, 0, 255, 0.747),
+      inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+      0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .card:hover > .cta {
+    outline: none;
+    background-color: #0d0d0d;
+  }
+  
+        .service-item.d-flex.flex-column.justify-content-center.text-center.rounded {
+            height: 416px;
+        }
+        .bg-primary {
+            background-color: #2892cc !important;
+        }
+
+
+        .navbar-light .navbar-nav .nav-link {
+            position: relative;
+            margin-left: 25px;
+            padding: 35px 0;
+            color: #0f0f10 !important;
+            outline: none;
+            transition: .5s;
+        }
+
+
+        .service-item.d-flex.flex-column.justify-content-center.text-center.rounded {
+            height: 416px;
+        }
+        .bg-primary {
+            background-color: #d48831 !important;
+        }
+
+
+        .navbar-light .navbar-nav .nav-link {
+            position: relative;
+            margin-left: 25px;
+            padding: 35px 0;
+            color: #0f0f10 !important;
+            outline: none;
+            transition: .5s;
+        }
+
+
+        .navbar-light .navbar-nav .nav-link.active {
+            color:  #FFD700                  !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">
+                        <!-- Replace the logo with your actual image file path -->
+                        <img src="images/logo.png" alt="Logo" style="height: 40px;"> 
+                        Forex <span class="fs-5">livehub</span>
+                    </h1>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="prize.html" class="nav-item nav-link">Price</a>
+
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated zoomIn">"Empowering Promising Traders Worldwide"</h1>
+                            <p class="text-white pb-3 animated zoomIn">Our Platform, Your Success</p>
+                            <a href="contact.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Start Challenge</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid" src="img/flat-hand-drawn-removebg-preview.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Full Screen Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center">
+                        <div class="input-group" style="max-width: 600px;">
+                            <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                            <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Full Screen Search End -->
+
+
+        
+
+
+
+
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>
+                    <h2 class="mt-2">Maximize Your Trading Success with FundedNext.</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa-solid fa-coins fa-beat" ></i>                      
+                                </div>
+                            <h5 class="mb-3">15% Profit Share in Challenge Phase</h5>
+                            <p>FundedNext is the only trading prop firm that offers a 15% profit share from the Challenge Phase profits, so you can start earning immediately.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa-solid fa-scale-balanced fa-beat fa-2x"></i>
+                                                             </div>
+                            <h5 class="mb-3">Balance-Based Drawdown</h5>
+                            <p>FundedNext offers a balance-based drawdowns, ensuring traders can hold their trades tension-free.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa-solid fa-newspaper fa-beat-fade fa-2x" ></i>                            </div>
+                            <h5 class="mb-3">News Trading</h5>
+                            <p>FundedNext allows news trading so you can quickly make profits by utilizing big market movements when a high-impact news is announced.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa-brands fa-trade-federation fa-2x" ></i>                           </div>
+                            <h5 class="mb-3">Reset & Topup</h5>
+                            <p>Reset or top-up your account to restart your trading journey, even if you’ve violated any rules.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa-solid fa-book fa-fade fa-2x"></i>                            </div>
+                            <h5 class="mb-3">Monthly Competition</h5>
+                            <p>FundedNext hosts free monthly competitions where you can compete for exclusive rewards.</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa-solid fa-earth-americas fa-2x"></i>                    
+                                 </div>
+                            <h5 class="mb-3">Reset & Topup</h5>
+                            <p>Reset or top-up your account to restart your trading journey, even if you’ve violated any rules.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <!-- <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Our Services</span></h1> -->
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <!-- Experience Section-->
+                    <section>
+                        <!-- <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h2 class="text-primary fw-bolder mb-0">Experience</h2>
+                            
+                            <a class="btn btn-primary px-4 py-3" href="#!">
+                                <div class="d-inline-block bi bi-download me-2"></div>
+                                Download Resume
+                            </a>
+                        </div> -->
+                        <!-- Experience Card 1-->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="img/trade 1.avif" alt="Web Developer" class="img-fluid rounded-4">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-8"><div>
+                                        <div class="text-secondary fw-bolder mb-2"> No Time Limit</div>
+                                        Trade with no rush on our Stellar Challenges and execute your trading strategies at your own pace.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience Card 2-->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="img/trade 2.avif" alt="Web Developer" class="img-fluid rounded-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8"><div>
+                                        <div class="text-secondary fw-bolder mb-2"> Balance-based Drawdown</div>
+                                        Experience absolute freedom and hold your trades tension-free with our drawdowns calculated on your balance.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="img/trade 3.avif" alt="Web Developer" class="img-fluid rounded-4">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-8"><div>
+                                        <div class="text-secondary fw-bolder mb-2">
+                                            Fastest FundedNext Challenge</div>
+                                            Get your FundedNext Accounts with only just 2 days of trading with Stellar 1-Step and 5 days of trading with Stellar 2-Step.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="img/trade 4.avif" alt="Web Developer" class="img-fluid rounded-4">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-8"><div>
+                                        <div class="text-secondary fw-bolder mb-2">
+                                            Up to 95% Profit Share</div>
+                                            Keep up to 95% of the profits you make with your FundedNext Stellar 1-Step and 2-Step Accounts.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="img/trade 5.avif" alt="Web Developer" class="img-fluid rounded-4">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-8"><div>
+                                        <div class="text-secondary fw-bolder mb-2">Attendance Details</div>
+                                        "Track attendance effortlessly with our system, providing detailed logs of presence, absences, and punctuality. Stay informed with real-time data, reports, and insights for accurate record-keeping and efficient management."</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Education Section-->
+                    <section>
+                        <!-- Education Card 1-->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="img/trade 8.avif" alt="Web Developer" class="img-fluid rounded-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8"><div>
+                                        <div class="text-secondary fw-bolder mb-2">FundedNext Community                                        </div>
+                                        Serving over 700,000+ members</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Education Card 2-->
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <img src="img/portfolio-2.jpg" alt="Web Developer" class="img-fluid rounded-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8"><div>
+                                        <div class="text-secondary fw-bolder mb-2">24/7
+                                            Pro Support</div>
+                                            With a 50-second average response time, we’re a prop trading firm that truly cares about our traders.</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Divider-->
+                    <div class="pb-5"></div>
+                    <!-- Skills Section-->
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Start -->
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <!-- <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Pricing Pack</span></h1> -->
+            </div>
+            
+
+
+            <div class="cards__inner">
+                <!-- Free Plan -->
+                <div class="cards__card card">
+                  <p class="card__heading">Stellar</p>
+                  <p class="card__price">The most popular package amongst FundedNext traders</p1>
+                  <ul class="card_bullets flow" role="list">
+                    <li>Upto 95% Profit Split</li>
+                    <li>15% Profit Share in Challenge Phase</li>
+                    <li>Up to 150% Reward</li>
+                    <li>Up to 150% Reward</li>
+                    <li>No Time Limit</li>
+                    <li>News Trading Allowed</li>
+                  </ul>
+                  <a class="card__cta cta" href="#free">Start Challenge</a>
+                </div>
+                
+                <div class="overlay cards__inner"></div>
+              
+                <!-- Basic Plan -->
+                <div class="cards__card card">
+                    <p class="card__heading">Stellar</p>
+                    <p class="card__price">The most popular package amongst FundedNext traders</p1>
+                    <ul class="card_bullets flow" role="list">
+                      <li>Upto 95% Profit Split</li>
+                      <li>15% Profit Share in Challenge Phase</li>
+                      <li>Up to 150% Reward</li>
+                      <li>Up to 150% Reward</li>
+                      <li>No Time Limit</li>
+                      <li>News Trading Allowed</li>
+                    </ul>
+                  <a class="card__cta cta" href="#basic">Start Challenge</a>
+                </div>
+                
+                <div class="overlay cards__inner"></div>
+              
+                <!-- Platinum Plan -->
+                <div class="cards__card card">
+                    <p class="card__heading">Express</p>
+                    <p class="card__price">The most popular package amongst FundedNext traders</p1>
+                    <ul class="card_bullets flow" role="list">
+                      <li>Upto 95% Profit Split</li>
+                      <li>15% Profit Share in Challenge Phase</li>
+                      <li>Up to 150% Reward</li>
+                      <li>Up to 150% Reward</li>
+                      <li>No Time Limit</li>
+                      <li>News Trading Allowed</li>
+                    </ul>
+                  <a class="card__cta cta contact" href="mailto:sales@wizbees.co.in?subject=Platinum%20Plan%20Inquiry">Start Challenge</a>
+                  <!-- Contact Us Button for Platinum -->
+                </div>
+              
+                <div class="overlay cards__inner"></div>
+              </div>
+              
+
+
+
+        </div>
+
+
+    </div>
+        <!-- Portfolio End -->
+
+
+        <!-- Testimonial Start -->
+          
+        <!-- Testimonial End -->
+     
+        <div class="y">
+
+        <div class="e-card playing">
+            <div class="image"></div>
+            
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            
+          
+                <div class="infotop">
+          
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+            <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+            4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+            21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+            22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+            17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+            14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+            3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+            19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+            12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+            16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+            15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+            19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+             16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+             20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+             5% Daily Drawdown          <br>
+          <div class="name">Traders are allowed a maximum of 10% loss from the initial balan</div>
+            </div>
+          </div>
+          <div class="e-card playing">
+            <div class="image"></div>
+            
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            
+          
+                <div class="infotop">
+          
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+            <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+            4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+            21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+            22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+            17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+            14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+            3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+            19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+            12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+            16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+            15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+            19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+             16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+             20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+             5% Daily Drawdown          <br>
+          <div class="name">Traders are allowed a maximum of 10% loss from the initial balan</div>
+            </div>
+          </div>
+
+
+          <div class="e-card playing">
+            <div class="image"></div>
+            
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            
+          
+                <div class="infotop">
+          
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+            <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+            4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+            21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+            22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+            17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+            14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+            3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+            19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+            12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+            16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+            15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+            19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+             16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+             20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+             Profit Target (5% to 10%)          <br>
+          <div class="name">Our evaluation model has two assessment phases. In phase-01, you</div>
+            </div>
+          </div>
+
+
+          <div class="e-card playing">
+            <div class="image"></div>
+            
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            
+          
+                <div class="infotop">
+          
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+            <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+            4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+            21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+            22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+            17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+            14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+            3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+            19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+            12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+            16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+            15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+            19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+             16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+             20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+             Bi-Weekly Reward          <br>
+          <div class="name">In your FundedNext Account, you will be eligible to withdraw you</div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Team Start -->
+
+        <!-- Team End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>########</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>#######</p>
+                        <p><i class="fa fa-envelope me-3"></i>mail</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Popular Link</h5>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Project Gallery</h5>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <a href="https://wizbees.co.in/Iot.html" target="_blank">
+                                    <img class="img-fluid" src="img/trade 1.avif" alt="Image">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://wizbees.co.in/Iot.html" target="_blank">
+                                    <img class="img-fluid" src="img/trade 2.avif" alt="Image">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://wizbees.co.in/Iot.html" target="_blank">
+                                    <img class="img-fluid" src="img/trade 3.avif" alt="Image">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://wizbees.co.in/minebee.html" target="_blank">
+                                    <img class="img-fluid" src="img/trade 4.avif" alt="Image">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://wizbees.co.in/minebee.html" target="_blank">
+                                    <img class="img-fluid" src="img/trade 4.avif" alt="Image">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://wizbees.co.in/minebee.html" target="_blank">
+                                    <img class="img-fluid" src="img/trade 2.avif" alt="Image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Stay updated. Subscribe to our newsletter.</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Copyright © 2024 Forexlivehub.</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="contact.html">Contact</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
